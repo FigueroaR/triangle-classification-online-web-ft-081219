@@ -16,12 +16,13 @@ class Triangle
       begin
         raise TriangleError
       end 
+    elsif @a == @b && @a== @c && @b == @c 
+      :equilateral
     elsif @a && @c == @a && @c || @a && @b == @a && @b || @b && @c == @b && @c 
       :isosceles
     elsif @a && @b && @c != @a && @b && @c
       :scalene
-    elsif @a == @b && @a== @c && @b == @c 
-      :equilateral
+    
     end 
       
     #binding.pry 
