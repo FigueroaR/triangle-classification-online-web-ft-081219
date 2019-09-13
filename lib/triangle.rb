@@ -18,7 +18,7 @@ class Triangle
       :isosceles
     elsif @a && @b && @c != @a && @b && @c
       :scalene
-    else
+    elsif 
       begin
         raise TriangleError
       end 
