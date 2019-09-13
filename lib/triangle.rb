@@ -13,16 +13,17 @@ class Triangle
   
   def kind
     if ((@a == 0 || @b == 0 || @c == 0) || (@a < 0 || @b < 0 || @c < 0) || (@a + @b < @c || @b + @c < @a || @c + @b < @a))
-      :equilateral
+      begin
+        raise TriangleError
+      end 
     elsif @a && @c == @a && @c || @a && @b == @a && @b || @b && @c == @b && @c 
       :isosceles
     elsif @a && @b && @c != @a && @b && @c
       :scalene
     elsif @a == @b && @a== @c && @b == @c 
-      begin
-        raise TriangleError
-      end 
-    end
+      :equilateral
+    end 
+      
     #binding.pry 
   end 
   
