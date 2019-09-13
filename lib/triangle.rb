@@ -14,7 +14,7 @@ class Triangle
   def kind
     if @a && @b && @c == @a && @b && @c
       :equilateral
-    elsif @a && @c == @a && @c || @a && @b == @a && @b || @b && @c == @b && @c || (@b != @a && @c)
+    elsif @a && @c == @a && @c || @a && @b == @a && @b || @b && @c == @b && @c 
       :isosceles
     elsif @a && @b && @c != @a && @b && @c
       :scalene
